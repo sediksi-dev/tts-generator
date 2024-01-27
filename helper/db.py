@@ -73,7 +73,6 @@ class DB:
         is_tts_exist, tts = self.__check_tts(tts_input["uuid"])
         if not is_tts_exist:
             is_tts_created, tts = self.__create_tts(tts_input)
-            print("[TTS]", is_tts_created, tts)
             if not is_tts_created:
                 return False, tts
 

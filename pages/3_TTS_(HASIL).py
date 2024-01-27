@@ -123,7 +123,7 @@ sf.text_input(
 # Email Penulis TTS
 sf.text_input(
     label="Email Penulis TTS",
-    value=sessions.get("tts_info")["author"],
+    value=sessions.get("tts_info")["author_email"],
     key="sf_author_email",
     autocomplete="email",
     placeholder="Email Anda. Contoh: johndoe@gmail.com",
@@ -182,9 +182,10 @@ if sf.button(
     try:
         _submited, submited_tts = db.submit(author, tts_data)
         if _submited:
-            st.write(submited_tts)
             st.success("TTS berhasil disimpan!")
             st.balloons()
+            sessions.destroy()
+            st.switch_page("Home.py")
         else:
             st.error(submited_tts)
     except Exception:

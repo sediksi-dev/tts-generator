@@ -37,6 +37,10 @@ class Sessions:
             if key not in exclude:
                 st.session_state[key] = value
 
+    def destroy(self):
+        for key, value in st.session_state.items():
+            del st.session_state[key]
+
 
 class PageSessions:
     def __init__(self, page_states: dict = {}):
