@@ -13,7 +13,7 @@ st.set_page_config(
 
 sessions = Sessions()
 sessions.init()
-sessions.update("user_id", str(uuid.uuid4()))
+sessions.update("session_id", str(uuid.uuid4()))
 page = PageSessions({"stages": 0})
 
 if sessions.get("tts") is None:

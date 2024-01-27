@@ -1,13 +1,17 @@
 default_states = {
     # TTS Object
+    "session_id": None,
     "tts": None,
     "tts_details": None,
     # TTS Settings
-    "user_id": None,
     "tts_info": {
-        "title": "",
         "author": "",
-        "description": "",
+        "author_email": "",
+        "title": "",
+        "clues": {
+            "mode": "",
+            "values": None,
+        },
     },
     "input_words": "",
     "input_words_list": [],
