@@ -4,6 +4,8 @@ __pycache__/
 *$py.class
 services/olds/
 
+.streamlit/secrets.toml
+
 # C extensions
 *.so
 
